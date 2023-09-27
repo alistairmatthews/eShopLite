@@ -8,7 +8,8 @@ services:
       context: .
       dockerfile: DockerfileStore
     environment: 
-      - ProductEndpoint=http://host.docker.internal:5200
+      - ProductEndpoint=http://backend:8080
+      - ImagePrefix=http://localhost
     ports:
       - "5902:8080"
     depends_on: 
