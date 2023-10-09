@@ -11,7 +11,7 @@ services:
       - ProductEndpoint=http://backend:8080
       - ImagePrefix=http://localhost
     ports:
-      - "5902:8080"
+      - "32000:8080"
     depends_on: 
       - backend
   backend:
@@ -20,4 +20,4 @@ services:
       context: .
       dockerfile: DockerfileProducts
     ports: 
-      - "5200:8080"
+      - "32001:8080"
